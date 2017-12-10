@@ -9,4 +9,4 @@ gulp-cli
 
 clone this repo
 npm i
-gulp
+gulp# Start
