@@ -5,7 +5,6 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var fontgen = require('gulp-fontgen');
 
 const del  = require('del');
 
@@ -22,7 +21,6 @@ const paths = {
     templates: {// шаблоны
         pages: 'src/templates/pages/*.pug', // все странички
         src: 'src/templates/**/*.pug', // все исходники
-        // dest: 'build/assets'//куда будет складываться
     },
     styles: {
         src: 'src/styles/**/*.scss',
@@ -35,6 +33,10 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    fonts: {
+        src: 'src/fonts/*.{woff,woff2}',
+        dest: 'build/assets/fonts/'
     }
 }
 
@@ -50,24 +52,17 @@ function styles() {
     return gulp.src('./src/styles/app.scss')// исходная точка
         .pipe(sourcemaps.init())
         .pipe( autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
-        .pipe( gulp.dest('dist/js'))
+//        .pipe( gulp.dest('dist/js'))
         .pipe(sass({ outputStyle: 'compressed' }))// компиляция
         .pipe(sourcemaps.write())
         .pipe(rename({ suffix: '.min' }))// не обязательно
         .pipe(gulp.dest(paths.styles.dest));// куда положить
 }
 
-// генерация шрифтов
-function fontgen() {
-    return gulp.src('src/fonts/*.{ttf,otf}')
-        .pipe(fontgen({
-            dest: 'build/assets/fonts'
-        }));
-}
-
-// автопреффиксер
-function autoprefixer() {
-    return gulp.src('./src/styles/app.scss')
+// перенос шрифтов
+function fontsmove() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
 }
 
 // очистка
@@ -110,10 +105,11 @@ exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;// удаление
 exports.images = images;// сжатие картинок
-exports.fontgen = fontgen;
+exports.fontsmove = fontsmove;
+exports.scripts = scripts;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, autoprefixer, templates, images, scripts, fontgen),
+    gulp.parallel(styles, templates, images, scripts, fontsmove),
     gulp.parallel(watch, server)
 ));
