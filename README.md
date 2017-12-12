@@ -7,6 +7,6 @@ gulp-cli
 
 Как установить проект
 
-clone this repo
-npm i
+### clone this repo
+### npm i
 gulp# Start

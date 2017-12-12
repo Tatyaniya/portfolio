@@ -4,8 +4,8 @@ const pug = require('gulp-pug');// паг в константу паг, чтоб
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
+var fontgen = require('gulp-fontgen');
 
 const del  = require('del');
 
@@ -39,7 +39,6 @@ const paths = {
 }
 
 // pug
-// вместо task
 function templates() {
     return gulp.src(paths.templates.pages)
         .pipe(pug({ pretty: true }))// красивые отступы
@@ -50,16 +49,26 @@ function templates() {
 function styles() {
     return gulp.src('./src/styles/app.scss')// исходная точка
         .pipe(sourcemaps.init())
+        .pipe( autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+        .pipe( gulp.dest('dist/js'))
         .pipe(sass({ outputStyle: 'compressed' }))// компиляция
         .pipe(sourcemaps.write())
         .pipe(rename({ suffix: '.min' }))// не обязательно
         .pipe(gulp.dest(paths.styles.dest));// куда положить
 }
 
+// генерация шрифтов
+function fontgen() {
+    return gulp.src('src/fonts/*.{ttf,otf}')
+        .pipe(fontgen({
+            dest: 'build/assets/fonts'
+        }));
+}
+
 // автопреффиксер
-gulp.task("default", function (){
-    return gulp.src('')
-})
+function autoprefixer() {
+    return gulp.src('./src/styles/app.scss')
+}
 
 // очистка
 function clean() {
@@ -99,11 +108,12 @@ function images() {
 
 exports.templates = templates;
 exports.styles = styles;
-exports.clean = clean;// иногда нужно вызывать в серии задач, иногда просто удалить
+exports.clean = clean;// удаление
 exports.images = images;// сжатие картинок
+exports.fontgen = fontgen;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, autoprefixer, templates, images, scripts, fontgen),
     gulp.parallel(watch, server)
 ));

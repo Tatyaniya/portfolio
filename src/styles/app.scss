@@ -1,8 +1,11 @@
+@import 'normalize';
+
 //вначале глобальные стили
 body{
     margin: 100px;
     background: #ccc;
 }
+
 //потом импортим другие стили
 @import 'common/menu';
 @import 'common/technologies';
