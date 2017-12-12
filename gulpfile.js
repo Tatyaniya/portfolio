@@ -4,8 +4,10 @@ const pug = require('gulp-pug');// паг в константу паг, чтоб
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer');
 
-const del = require('del');
+const del  = require('del');
 
 const browserSync = require('browser-sync').create();
 
@@ -16,10 +18,10 @@ const webpackConfig = require('./webpack.config.js');
 
 // все пути вынести в один объект, чтобы можно было быстро их менять
 const paths = {
-    root: './build',// корень проэкта
+    root: './build', // корень проэкта
     templates: {// шаблоны
-        pages: 'src/templates/pages/*.pug',// все странички
-        src: 'src/templates/**/*.pug',// все исходники
+        pages: 'src/templates/pages/*.pug', // все странички
+        src: 'src/templates/**/*.pug', // все исходники
         // dest: 'build/assets'//куда будет складываться
     },
     styles: {
@@ -40,7 +42,7 @@ const paths = {
 // вместо task
 function templates() {
     return gulp.src(paths.templates.pages)
-        .pipe(pug({pretty: true}))// красивые отступы
+        .pipe(pug({ pretty: true }))// красивые отступы
         .pipe(gulp.dest(paths.root));// куда положить
 }
 
@@ -48,11 +50,16 @@ function templates() {
 function styles() {
     return gulp.src('./src/styles/app.scss')// исходная точка
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))// компиляция
+        .pipe(sass({ outputStyle: 'compressed' }))// компиляция
         .pipe(sourcemaps.write())
-        .pipe(rename({suffix: '.min'})// не обязательно
-        .pipe(gulp.dest(paths.styles.dest))// куда положить
+        .pipe(rename({ suffix: '.min' }))// не обязательно
+        .pipe(gulp.dest(paths.styles.dest));// куда положить
 }
+
+// автопреффиксер
+gulp.task("default", function (){
+    return gulp.src('')
+})
 
 // очистка
 function clean() {
