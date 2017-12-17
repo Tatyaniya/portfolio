@@ -26,7 +26,7 @@ block content
             .about__triangle.about__triangle--left
                 svg.triangle.triangle--white
             .about__left-title
-                h2.block__title Обо мне
+                h2.block-title Обо мне
 
             .about__left-content
                 .user-description
@@ -57,14 +57,14 @@ block content
                     li.skills-list__item.skills-row
                         .skills-row__title Beckend
                         ul.skills-row__list
-                            each item in ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                            each item in ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
                                 li.skills-row__item.skill
                                     svg.skill__circle
                                         .skill__title #{item}
                     li.skills-list__item.skills-row
                         .skills-row__title WorkFlow
                         ul.skills-row__list
-                            each item in ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                            each item in ['Git', 'Gulp', 'Bower']
                                 li.skills-row__item.skill
                                     svg.skill__circle
                                         .skill__title #{item}
@@ -89,13 +89,29 @@ block content
                         .contacts-row
                             .contacts-row__icon #{contact[0]}
                             .contacts-row__content #{contact[1]}
-    footer.footer
+    footer.footer.footer--about
         .footer__row
             .footer__col.footer__menu
                 include ../common/menu.pug
-            .footer__col.footer__social
-                include ../common/social.pug
+            .footer__col.social--dark
+                ul.social__list
+                    li.social__item
+                        a.social__link.social__link--vk(href='https://vk.com/id12285178')
+                            svg.social__icon
+                                use(xlink:href='')
+                    li.social__item
+                        a.social__link.social__link--github(href='https://github.com/Tatyaniya')
+                            svg.social__icon
+                                use(xlink:href='')
+                    li.social__item
+                        a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
+                            svg.social__icon
+                                use(xlink:href='')
         .footer__row
+            .footer__col.footer__text
+                p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
+            .footer__col.footer__text
+                p Татьяна Мельничук создано в любовью в LoftSchool 2017
 
 
 

@@ -4,6 +4,41 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
-    include ../common/menu.pug
+    section.section.home
+        include ../common/social.pug
+        .home__menu
+            a(href="#").hamburger
+                .hamburger__link
+        .home__title
+            .section-title
+                img.section-title__pic
+            .home__user.user                    
+                .user__pic
+                    img.user__pic-img
+                .user__info
+                    .user__name Татьяна Мельничук
+                    .user__data Личный сайт веб-разработчика
+        .triangle.triangle--left
+            svg.triangle.triangle--white
+        .triangle.triangle--right
+            svg.triangle.triangle--biege
+        a.home__arrow.arrow-down
+
+    section.section.works
+        .works-title
+                h2.block-title Мои работы
+        .works__elem
+            .works__first
+                .works__elem-title
+                    h3.block-subtitle Сайт школы онлайн-образования
+                .works__elem-tech
+                    h4.block-green html, css, javascript
+                button.button.button--green
+                    svg.button__icon
+                    span.button__text Посмотреть сайт
+            .works__second
+            .works__third
+    section.section.speaking
+        .speaking-title
+                h2.block__title Что обо мне говорят
+        include ../common/footer.pug
