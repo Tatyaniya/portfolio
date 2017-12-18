@@ -6,14 +6,35 @@ block variables
 block content
     .wrapper
         .welcome
-
-
-
-
-            form 
-                label(for="email") email
-                input(name="email" id="email")
-                label(for="password") password
-                input(name="password" id="password")
-                button Войти
-            include ../common/menu.pug
+            .user-container
+                .welcome__info.user             
+                    .user__pic
+                        img.user__pic-img(src='../assets/images/users/me.jpg')
+                    .user__info
+                        .user__name Татьяна Мельничук
+                        .user__data Личный сайт веб-разработчика
+                    .welcome__social
+                        ul.social__list
+                            li.social__item
+                                a.social__link.social__link--vk(href='https://vk.com/id12285178')
+                                    img.social__icon(src='assets/images/icons/vk.svg' alt='vk')
+                            li.social__item
+                                a.social__link.social__link--github(href='https://github.com/Tatyaniya')
+                                    img.social__icon(src='assets/images/icons/github.svg' alt='github')
+                            li.social__item
+                                a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
+                                    img.social__icon(src='assets/images/icons/in.svg' alt='fb')
+                    nav.menu.welcome__menu
+                        ul.menu__list
+                            li.menu__item
+                                a(href="/my-works.html").menu__link Мои работы
+                            li.menu__item
+                                a(href="/about.html").menu__link Обо мне
+                            li.menu__item
+                                a(href="/blog.html").menu__link Блог
+            button.button
+                span.button__text Авторизоваться
+            .welcome__footer.footer__text
+                span.footer__border Татьяна Мельничук 
+                span.footer__border создано в любовью в LoftSchool 
+                span.footer__border 2017
