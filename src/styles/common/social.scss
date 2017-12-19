@@ -1,5 +1,18 @@
 .social__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.social__item {
+    margin-right: 25px;
+    width: 27px;
+}
+
+.social__icon--welcome {
+    color: #00bfa5;
+
+    &:hover {
+        color: #009688;
+    }
 }
