@@ -2,17 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 .social__item {
     margin-right: 25px;
     width: 27px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 }
 
 .social__icon--welcome {
     color: #00bfa5;
 
-    &:hover {
-        color: #009688;
-    }
+        &:hover {
+            color: #009688;
+        }
 }
