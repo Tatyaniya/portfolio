@@ -27,7 +27,42 @@
     background-color: rgba(255, 255, 255, .7);
     border-radius: 5px;
     padding-top: 40px;
-    width: 25.55rem;
+    width: 24rem;
+}
+
+.welcome__info.user {
+    width: 100%;
+}
+
+
+.welcome__menu {
+    width: 100%;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    flex: 1 1 auto;
+    padding: 12px 0;
+    text-align: center;
+    background: rgba(9, 176, 157, .7);
+    border-right: 2px solid #74cac3;
+
+        &:hover {
+            background: #009688;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+}
+
+.menu__link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .user__pic {
@@ -80,4 +115,17 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.footer__border {
+    border-right: 1px solid #fff;
+    padding: 0 6px;
+
+        &:last-child {
+            border-right: none;
+        }
 }
