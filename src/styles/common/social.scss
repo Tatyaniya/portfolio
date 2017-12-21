@@ -1,13 +1,7 @@
 .social__list {
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    
-}
-
-.welcome__social {
-    margin-bottom: 40px;
+    align-items: center;  
 }
 
 .social__item {
@@ -19,7 +13,20 @@
         }
 }
 
-.social__icon--welcome {
-    width: 30px;
-    height: 30px;
+.welcome__social {
+    margin-bottom: 40px;
+}
+
+.social__icon {
+    fill: #fff;
+}
+
+.social__link--welcome {
+    width: 27px;
+    height: 27px;
+    fill: #00bfa5;
+
+        &:hover {
+            fill: #009688;
+        }
 }

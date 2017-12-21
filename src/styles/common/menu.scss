@@ -1,7 +1,34 @@
-.menu{
-    padding: 0;
-    li{
-        display: inline-block;
-        list-style: none;
-    }
+.welcome__menu {
+    width: 100%;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item--welcome {
+    flex: 1 1 auto;
+    padding: 12px 0;
+    text-align: center;
+    background: rgba(9, 176, 157, .7);
+    border-right: 2px solid #74cac3;
+
+        &:hover {
+            background: #009688;
+        }
+
+        &:first-child {
+            border-bottom-left-radius: 5px;
+        }
+
+        &:last-child {
+            border-right: none;
+            border-bottom-right-radius: 5px;
+        }
+}
+
+.menu__link--welcome {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
 }

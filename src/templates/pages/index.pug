@@ -16,28 +16,25 @@ block content
                     .welcome__social
                         ul.social__list
                             li.social__item
-                                a.social__link.social__link--vk(href='https://vk.com/id12285178' target='_blank')
-                                    svg.social__icon.social__icon--welcome
-                                        use(xlink:href='assets/images/icons/vk.svg')
+                                a.social__link.social__link--welcome(href='https://vk.com/id12285178' target='_blank')
+                                    include ../../images/icons/vk.svg
                             li.social__item
-                                a.social__link.social__link--github(href='https://github.com/Tatyaniya' target='_blank')
-                                    svg.social__icon.social__icon--welcome
-                                        use(xlink:href='assets/images/icons/github.svg')
+                                a.social__link.social__link--welcome(href='https://github.com/Tatyaniya' target='_blank')
+                                    include ../../images/icons/github.svg
                             li.social__item
-                                a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya' target='_blank')
-                                    svg.social__icon.social__icon--welcome
-                                        use(xlink:href='assets/images/icons/in.svg')
+                                a.social__link.social__link--welcome(href='https://www.facebook.com/Tatyaniya' target='_blank')
+                                    include ../../images/icons/in.svg
                     nav.menu.welcome__menu
                         ul.menu__list
-                            li.menu__item
-                                a(href="/my-works.html").menu__link Мои работы
-                            li.menu__item
-                                a(href="/about.html").menu__link Обо мне
-                            li.menu__item
-                                a(href="/blog.html").menu__link Блог
+                            li.menu__item--welcome
+                                a(href="/my-works.html").menu__link--welcome Мои работы
+                            li.menu__item--welcome
+                                a(href="/about.html").menu__link--welcome Обо мне
+                            li.menu__item--welcome
+                                a(href="/blog.html").menu__link--welcome Блог
             button(type='button').button.welcome__button
                 span.button__text Авторизоваться
             .welcome__footer.footer__text
-                span.footer__border Татьяна Мельничук 
+                span.footer__border &#169; Татьяна Мельничук 
                 span.footer__border создано в любовью в LoftSchool 
                 span.footer__border 2017

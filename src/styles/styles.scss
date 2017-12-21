@@ -34,37 +34,6 @@
     width: 100%;
 }
 
-
-.welcome__menu {
-    width: 100%;
-}
-
-.menu__list {
-    display: flex;
-}
-
-.menu__item {
-    flex: 1 1 auto;
-    padding: 12px 0;
-    text-align: center;
-    background: rgba(9, 176, 157, .7);
-    border-right: 2px solid #74cac3;
-
-        &:hover {
-            background: #009688;
-        }
-
-        &:last-child {
-            border-right: none;
-        }
-}
-
-.menu__link {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
 .user__pic {
     display: flex;
     justify-content: center;
@@ -129,3 +98,26 @@
             border-right: none;
         }
 }
+
+.home {
+    background: url(../images/bg/home.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.home__img {
+    width: 90%;
+    height: 1000%px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #fff;
+    opacity: .1;
+    text-align: center;
+}
+
+
