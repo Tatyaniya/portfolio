@@ -5,25 +5,30 @@ block variables
 
 block content
     section.section.home
-        include ../common/social.pug
+        .social
+            ul.social__list
+                li.social__item
+                    a.social__link.social__link--header(href='https://vk.com/id12285178' target='_blank')
+                        include ../../images/icons/vk.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://github.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/github.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://www.facebook.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/in.svg
         .home__menu
-            a(href="#").hamburger
+            button.hamburger
                 .hamburger__link
-        .home__title
-            .section-title
-                img.section-title__pic
-            .home__user.user                    
-                .user__pic
-                    img.user__pic-img
-                .user__info
-                    .user__name Татьяна Мельничук
-                    .user__data Личный сайт веб-разработчика
-        .triangle.triangle--left
-            svg.triangle.triangle--white
-        .triangle.triangle--right
-            svg.triangle.triangle--biege
-        a.home__arrow.arrow-down
-
+        .home__img
+            include ../../images/icons/portfolio_header.svg
+        .home__user.user                    
+            .user__pic
+                img.user__pic-img(src='../assets/images/users/me.jpg')
+            .user__info
+                .user__name--home Татьяна Мельничук
+                .user__data--home Личный сайт веб-разработчика
+        a.home__arrow
+            include ../../images/icons/arrow_down.svg
     section.section.works
         .works-title
                 h2.block-title Мои работы

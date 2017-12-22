@@ -105,12 +105,15 @@
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
 .home__img {
     width: 90%;
-    height: 1000%px;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,4 +123,121 @@
     text-align: center;
 }
 
+.home__img--blog {
+    position: absolute;
+    top: 66%;
+    width: 30%;
+}
+
+.home__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user__pic-img {
+    margin-bottom: 20px;
+    width: 175px;
+    height: 175px;
+}
+
+.user__name--home {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.125rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.user__data--home {
+    font-weight: 300;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.home__arrow {
+    fill: #fff;
+    opacity: .7;
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 27px;
+    height: 17px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    height: 36px;
+    width: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px; 
+}
+
+.hamburger__link {
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+
+        &:before,
+        &:after {
+            width: 40px;
+            height: 5px;
+            background: #fff;
+            border-radius: 5px;
+            position: absolute;         
+        }
+
+        &:before {
+            top: -11px;
+            left: 0;
+            content: "";
+        } 
+
+        &:after {
+            top: 11px;
+            left: 0;
+            content: "";
+        }
+}
+
+.home__title {
+    font-family: bernier, sans-serif;
+    font-weight: 500;
+    font-size: 63px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+
+        &:before,
+        &:after {
+            width: 22px;
+            height: 5px;
+            background: #b0ccd2;
+            content: "";
+            position: absolute;
+            
+        }
+
+        &:before {
+            left: -20px;
+            top: 46%;
+        }
+
+        &:after {
+            left: 210px;
+            top: 46%;
+        }
+}
 

@@ -17,10 +17,6 @@
     margin-bottom: 40px;
 }
 
-.social__icon {
-    fill: #fff;
-}
-
 .social__link--welcome {
     width: 27px;
     height: 27px;
@@ -28,5 +24,21 @@
 
         &:hover {
             fill: #009688;
+        }
+}
+
+.social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.social__link--header {
+    width: 27px;
+    height: 27px;
+    fill: #9ebebe;
+
+        &:hover {
+            fill: #fff;
         }
 }

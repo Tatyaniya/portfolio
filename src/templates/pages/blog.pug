@@ -4,7 +4,33 @@ block variables
     - var title = "Блог"
 
 block content
-    h1 блог
+    section.section.home
+        .social
+            ul.social__list
+                li.social__item
+                    a.social__link.social__link--header(href='https://vk.com/id12285178' target='_blank')
+                        include ../../images/icons/vk.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://github.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/github.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://www.facebook.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/in.svg
+        .home__menu
+            button.hamburger
+                .hamburger__link
+        .home__img.home__img--blog
+            include ../../images/icons/blog_header.svg
+        .home__user.user                    
+            .user__pic
+                img.user__pic-img(src='../assets/images/users/me.jpg')
+            .user__info
+                .home__title блог
+                .user__data--home Статьи, которые я написала
+        a.home__arrow
+            include ../../images/icons/arrow_down.svg
+
+
     ul
         li
             h2 Заголовок
