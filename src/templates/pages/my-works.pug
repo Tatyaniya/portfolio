@@ -31,11 +31,13 @@ block content
             include ../../images/icons/arrow_down.svg
     section.section.works
         .works-title
-                h2.block-title Мои работы
+            .works-title__elem
+                include ../../images/icons/works_header.svg
+                h2.block-title.block-title--works Мои работы
         .works__elem
             .works__first
                 .works__elem-title
-                    h3.block-subtitle Сайт школы онлайн-образования
+                    h3.block-subtitle.block-subtitle--school Сайт школы онлайн-образования
                 .works__elem-tech
                     h4.block-green html, css, javascript
                 button.button.button--green
@@ -45,5 +47,29 @@ block content
             .works__third
     section.section.speaking
         .speaking-title
-                h2.block__title Что обо мне говорят
-        include ../common/footer.pug
+            .speaking-title__elem
+                include ../../images/icons/about_header.svg
+                h2.block-title.block-title--works-down Что обо мне говорят
+        footer.footer.footer--works
+            .footer__row
+                .footer__col.footer__menu
+                    include ../common/menu.pug
+                .footer__col.social--dark
+                    ul.social__list
+                        li.social__item
+                            a.social__link.social__link--vk(href='https://vk.com/id12285178')
+                                svg.social__icon
+                                    use(xlink:href='')
+                        li.social__item
+                            a.social__link.social__link--github(href='https://github.com/Tatyaniya')
+                                svg.social__icon
+                                    use(xlink:href='')
+                        li.social__item
+                            a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
+                                svg.social__icon
+                                    use(xlink:href='')
+            .footer__row
+                .footer__col.footer__text
+                    p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
+                .footer__col.footer__text
+                    p Татьяна Мельничук создано в любовью в LoftSchool 2017

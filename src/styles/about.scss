@@ -1,0 +1,159 @@
+.about {
+    display: flex;
+}
+
+.about__left,
+.about__right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.about__left {
+    background: #efeee9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__left-title {
+    fill: #dcdbd6;
+    width: 400px;
+    height: 120px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 37px;
+}
+
+.block-title {
+    font-family: 'bernier_regular', sans-serif;
+    font-size: 3.9375rem;
+    text-align: center;
+    margin: 30px auto 60px auto;
+
+        &:before,
+        &:after {
+            width: 23px;
+            height: 5px;
+            background: #c3c4c0;
+            content: "";
+            position: absolute;
+        }
+}
+
+.block-title--about {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+        &:before {
+            left: -48px;
+            top: 39px;
+        }
+
+        &:after {
+            right: -46px;
+            top: 39px;
+        }
+}
+
+.user-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block-subtitle {
+    font-family: 'bernier_regular', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    position: relative;
+
+        &:before,
+        &:after {
+            width: 23px;
+            height: 5px;
+            background: #c9c8c0;
+            content: "";
+            position: absolute;
+        }
+}
+
+.block-subtitle--about {
+    text-align: center;
+    width: 180px;
+    margin: 10px auto;
+
+        &:before {
+            left: 10px;
+            top: 20px;
+        }
+
+        &:after {
+            right: 10px;
+            top: 20px;
+        }
+}
+
+.block-subtitle--skills {
+    text-align: center;
+    width: 280px;
+    margin: 10px auto;
+
+        &:before {
+            left: -15px;
+            top: 20px;
+        }
+
+        &:after {
+            right: -15px;
+            top: 20px;
+        }
+}
+
+.user-description__avatar {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.user__avatar {
+    width: 100%;
+}
+
+.user-description__text {
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+
+
+
+.about__right {
+    background: #eeebdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.about__right-contend {
+    width: 100%;
+}
+
+.skills-row__list {
+    display: flex;
+}
+
+.skills-row__title {
+    font-family: 'roboto-medium', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}

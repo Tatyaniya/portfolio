@@ -3,7 +3,7 @@
 body{
     margin: 0;
     background: #ccc;
-    font-family: roboto, sans-serif;
+    font-family: 'roboto-regular', sans-serif;
     color: #455a64;
     font-size: 16px;
 }
@@ -63,7 +63,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-bold';
     src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
          url('../fonts/roboto-bold-webfont.woff') format('woff');
     font-weight: bold;
@@ -71,7 +71,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-bolditalic';
     src: url('../fonts/roboto-bolditalic-webfont.woff2') format('woff2'),
          url('../fonts/roboto-bolditalic-webfont.woff') format('woff');
     font-weight: bold;
@@ -79,7 +79,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-italic';
     src: url('../fonts/roboto-italic-webfont.woff2') format('woff2'),
          url('../fonts/roboto-italic-webfont.woff') format('woff');
     font-weight: normal;
@@ -87,7 +87,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-light';
     src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
          url('../fonts/roboto-light-webfont.woff') format('woff');
     font-weight: normal;
@@ -95,7 +95,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-lightitalic';
     src: url('../fonts/roboto-lightitalic-webfont.woff2') format('woff2'),
          url('../fonts/roboto-lightitalic-webfont.woff') format('woff');
     font-weight: normal;
@@ -103,7 +103,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-medium';
     src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
          url('../fonts/roboto-medium-webfont.woff') format('woff');
     font-weight: normal;
@@ -111,7 +111,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-mediumitalic';
     src: url('../fonts/roboto-mediumitalic-webfont.woff2') format('woff2'),
          url('../fonts/roboto-mediumitalic-webfont.woff') format('woff');
     font-weight: normal;
@@ -119,7 +119,7 @@ li {
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'roboto-regular';
     src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
          url('../fonts/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -132,4 +132,6 @@ li {
 @import 'common/slider';
 
 @import 'styles';
-@import 'common/social'
+@import 'common/social';
+@import 'about.scss';
+@import 'works.scss'

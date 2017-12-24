@@ -29,30 +29,28 @@ block content
                 .user__data--home Личный сайт веб-разработчика
         a.home__arrow
             include ../../images/icons/arrow_down.svg
+        
 
 
     section.section.about
         .about__left
-            .about__triangle.about__triangle--left
-                svg.triangle.triangle--white
             .about__left-title
-                h2.block-title Обо мне
-
+                include ../../images/icons/about_header.svg
+                h2.block-title.block-title--about Обо мне
+          
             .about__left-content
                 .user-description
-                    .user-description__image
-                        .user-description__avatar(style="background-image: url()")
+                    .user-description__avatar
+                        img.user__avatar(src='../assets/images/users/me.jpg')
                     .user-description__title
-                        h3.block-subtitle Кто я
+                        h3.block-subtitle.block-subtitle--about Кто я
                     .user-description__text.text-block
                         p Я веб-разработчик из Киева. Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                         p Этот сайт я сделала в рамках обучения в Школе онлайн-образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
-        .aboyt__right
-            .about__triangle.about__triangle--right
-                svg.triangle.triangle--biege
+        .about__right
             .about__right-title
-                h3.block-subtitle Чем я могу быть вам полезна
+                h3.block-subtitle.block-subtitle--skills Чем я могу быть вам полезна
             .about__right-desc.text-block
                 p Больше всего меня привлекает Frontend-разработка, но я также знакома и могу решать не сложные задачи на Beckend. Но давайте по порядку:
             .about__right-contend
@@ -99,29 +97,29 @@ block content
                         .contacts-row
                             .contacts-row__icon #{contact[0]}
                             .contacts-row__content #{contact[1]}
-    footer.footer.footer--about
-        .footer__row
-            .footer__col.footer__menu
-                include ../common/menu.pug
-            .footer__col.social--dark
-                ul.social__list
-                    li.social__item
-                        a.social__link.social__link--vk(href='https://vk.com/id12285178')
-                            svg.social__icon
-                                use(xlink:href='')
-                    li.social__item
-                        a.social__link.social__link--github(href='https://github.com/Tatyaniya')
-                            svg.social__icon
-                                use(xlink:href='')
-                    li.social__item
-                        a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
-                            svg.social__icon
-                                use(xlink:href='')
-        .footer__row
-            .footer__col.footer__text
-                p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
-            .footer__col.footer__text
-                p Татьяна Мельничук создано в любовью в LoftSchool 2017
+        footer.footer.footer--about
+            .footer__row
+                .footer__col.footer__menu
+                    include ../common/menu.pug
+                .footer__col.social--dark
+                     ul.social__list
+                        li.social__item
+                            a.social__link.social__link--vk(href='https://vk.com/id12285178')
+                                svg.social__icon
+                                    use(xlink:href='')
+                        li.social__item
+                            a.social__link.social__link--github(href='https://github.com/Tatyaniya')
+                                svg.social__icon
+                                    use(xlink:href='')
+                        li.social__item
+                            a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
+                                svg.social__icon
+                                    use(xlink:href='')
+            .footer__row
+                .footer__col.footer__text
+                    p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
+                .footer__col.footer__text
+                    p Татьяна Мельничук создано в любовью в LoftSchool 2017
 
 
 
