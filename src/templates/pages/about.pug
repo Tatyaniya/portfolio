@@ -29,6 +29,10 @@ block content
                 .user__data--home Личный сайт веб-разработчика
         a.home__arrow
             include ../../images/icons/arrow_down.svg
+        .triangle
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__elem
+                polygon.left(points="0,0   0,86   500.8,86   500.8,75.5" fill="#efeee9")
+                polygon.right(points="1000,0   1000,86   500,86   500,75.5" fill="#eeebdf")
         
 
 
@@ -54,28 +58,66 @@ block content
             .about__right-desc.text-block
                 p Больше всего меня привлекает Frontend-разработка, но я также знакома и могу решать не сложные задачи на Beckend. Но давайте по порядку:
             .about__right-contend
-                ul.skills-list
-                    li.skills-list__item.skills-row
-                        .skills-row__title Frontend
+                .skills
+                    .skills__item.skills-row
+                        h4.skills-row__title Frontend
                         ul.skills-row__list
-                            each item in ['HTML5', 'CSS3', 'JavaScript & jQuery']
-                                li.skills-row__item.skill
-                                    svg.skill__circle
-                                        .skill__title #{item}
-                    li.skills-list__item.skills-row
-                        .skills-row__title Beckend
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 113.04").circle__second
+                                span.skill__circle-title HTML 
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 155.43").circle__second
+                                span.skill__circle-title CSS3 
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 240.21").circle__second
+                                span.skill__circle-title JavaScript & jQuery 
+                    .skills__item.skills-row
+                        h4.skills-row__title Beckend
                         ul.skills-row__list
-                            each item in ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
-                                li.skills-row__item.skill
-                                    svg.skill__circle
-                                        .skill__title #{item}
-                    li.skills-list__item.skills-row
-                        .skills-row__title WorkFlow
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 268.47").circle__second
+                                span.skill__circle-title PHP
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 268.47").circle__second
+                                span.skill__circle-title mySQL
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 211.95").circle__second
+                                span.skill__circle-title Node.js & npm
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 268.47").circle__second
+                                span.skill__circle-title Mongo.db
+                    .skills__item.skills-row
+                        h4.skills-row__title WorkFlow
                         ul.skills-row__list
-                            each item in ['Git', 'Gulp', 'Bower']
-                                li.skills-row__item.skill
-                                    svg.skill__circle
-                                        .skill__title #{item}
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 155.43").circle__second
+                                span.skill__circle-title Git
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 155.43").circle__second
+                                span.skill__circle-title Gulp
+                            li.skills-row__item.skill
+                                svg.skill__circle(viewBox='0 0 110 110' width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg")
+                                    circle(r="45" cx="55" cy="55" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0").circle__first
+                                    circle(r="45" cx="55" cy="55"  transform="rotate(-90 55 55)" fill="transparent" stroke-dasharray="282.6" stroke-dashoffset="0" style="stroke-dashoffset: 268.47").circle__second
+                                span.skill__circle-title Bower
         
     section.section.map
         .google-map
