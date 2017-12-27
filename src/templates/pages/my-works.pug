@@ -4,5 +4,123 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    section.section.home
+        .social
+            ul.social__list
+                li.social__item
+                    a.social__link.social__link--header(href='https://vk.com/id12285178' target='_blank')
+                        include ../../images/icons/vk.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://github.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/github.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://www.facebook.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/in.svg
+        .home__menu
+            button.hamburger
+                .hamburger__link
+        .home__img
+            include ../../images/icons/portfolio_header.svg
+        .home__user.user                    
+            .user__pic
+                img.user__pic-img(src='../assets/images/users/me.jpg')
+            .user__info
+                .user__name--home Татьяна Мельничук
+                .user__data--home Личный сайт веб-разработчика
+        a.home__arrow
+            include ../../images/icons/arrow_down.svg
+        .triangle
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__elem
+                polygon.left(points="0,0   0,86   500.8,86   500.8,75.5" fill="#faf8f0")
+                polygon.right(points="1000,0   1000,86   500,86   500,75.5" fill="#faf8f0")
+
+
+    section.section.works
+        .works-title
+            .works-title__elem
+                include ../../images/icons/works_header.svg
+                h2.block-title.block-title--works Мои работы
+        .works__elem
+            .works__first
+                .works__elem-title
+                    h3.block-subtitle.block-subtitle--school Сайт школы онлайн-образования
+                .works__elem-tech
+                    h4.block-green html, css, javascript
+                button.button.button--green
+                    svg.button__icon
+                    span.button__text Посмотреть сайт
+            .works__second
+            .works__third
+
+
+    section.section.speaking
+        .speaking-title
+            .speaking-title__elem
+                include ../../images/icons/about_header.svg
+                h2.block-title.block-title--works-down Что обо мне говорят
+        .comments
+            .comments__item
+                .comments__icon
+                    include ../../images/icons/quote.svg
+                .comments__text
+                    p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
+                .comments__user
+                    .comments__foto
+                        img.comments__pic-img(src='../assets/images/users/Dima.jpg')
+                    .comments__info
+                        .comments__name Ковальчук Дмитрий
+                        .comments__status основатель LoftSchool
+            .comments__item
+                .comments__icon
+                    include ../../images/icons/quote.svg
+                .comments__text
+                    p Этот код выдержит любые испытания. Только, пожалуйста, не загружайте сайт на слишком старых браузерах!
+                .comments__user
+                    .comments__foto
+                        img.comments__pic-img(src='../assets/images/users/Wova.jpg')
+                    .comments__info
+                        .comments__name Сабанцев Владимир
+                        .comments__status преподаватель
+
+        .form.form__container
+            h3.block-subtitle.block-subtitle--form связаться со мной
+            .form__feed
+                .form__blur
+                .form__inputs
+                    input(type="text" name="name" placeholder="Имя").form__input
+                    input(type="email" name="email" placeholder="Email").form__input
+                    textarea(name="message" placeholder="Ваше сообщение").form__input.form__message
+            .form__buttons
+                button(type="submit").form__button Отправить
+                button(type="reset").form__button Очистить
+        .footer__arrow
+            include ../../images/icons/arrow_down.svg
+
+        footer.footer.footer--works
+            .footer__links
+                nav.footer__menu
+                    ul.footer__list
+                        li.footer__item
+                            a(href="/my-works.html").footer__link Мои работы
+                        li.footer__item
+                            a(href="/about.html").footer__link Обо мне
+                        li.footer__item
+                            a(href="/blog.html").footer__link Блог
+                        li.footer__item
+                            a(href="/index.html").footer__link Авторизация
+                .social-dark
+                     ul.social-dark__list
+                        li.social-dark__item
+                            a.social-dark__link(href='https://vk.com/id12285178')
+                                include ../../images/icons/vk.svg
+                        li.social-dark__item
+                            a.social-dark__link(href='https://github.com/Tatyaniya')
+                                include ../../images/icons/github.svg
+                        li.social-dark__item
+                            a.social-dark__link(href='https://www.facebook.com/tatyaniya')
+                                include ../../images/icons/in.svg
+            .footer__row
+                .footer__text.footer__text--left
+                    p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
+                .footer__col.footer__text
+                    p &#169; Татьяна Мельничук | создано c любовью в LoftSchool | 2018

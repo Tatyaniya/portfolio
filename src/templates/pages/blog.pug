@@ -4,21 +4,58 @@ block variables
     - var title = "Блог"
 
 block content
-    h1 блог
-    ul
-        li
-            h2 Заголовок
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, neque quam perferendis culpa esse doloremque quos ipsam, voluptatum veritatis deleniti iure iusto architecto, nulla officiis dicta? Quis vitae inventore excepturi.
-        li
-            h2 Заголовок
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, neque quam perferendis culpa esse doloremque quos ipsam, voluptatum veritatis deleniti iure iusto architecto, nulla officiis dicta? Quis vitae inventore excepturi.
-        li
-            h2 Заголовок
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, neque quam perferendis culpa esse doloremque quos ipsam, voluptatum veritatis deleniti iure iusto architecto, nulla officiis dicta? Quis vitae inventore excepturi.
-        li
-            h2 Заголовок
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, neque quam perferendis culpa esse doloremque quos ipsam, voluptatum veritatis deleniti iure iusto architecto, nulla officiis dicta? Quis vitae inventore excepturi.
-        li
-            h2 Заголовок
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, neque quam perferendis culpa esse doloremque quos ipsam, voluptatum veritatis deleniti iure iusto architecto, n
-        
+    section.section.home
+        .social
+            ul.social__list
+                li.social__item
+                    a.social__link.social__link--header(href='https://vk.com/id12285178' target='_blank')
+                        include ../../images/icons/vk.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://github.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/github.svg
+                li.social__item
+                    a.social__link.social__link--header(href='https://www.facebook.com/Tatyaniya' target='_blank')
+                        include ../../images/icons/in.svg
+        .home__menu
+            button.hamburger
+                .hamburger__link
+        .home__img.home__img--blog
+            include ../../images/icons/blog_header.svg
+        .home__user.user                    
+            .user__pic
+                img.user__pic-img(src='../assets/images/users/me.jpg')
+            .user__info
+                .home__title блог
+                .user__data--home Статьи, которые я написала
+        a.home__arrow
+            include ../../images/icons/arrow_down.svg
+        .triangle
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__elem
+                polygon.left(points="0,0   0,86   500.8,86   500.8,75.5" fill="#ffffff")
+                polygon.right(points="1000,0   1000,86   500,86   500,75.5" fill="#ffffff")
+
+
+    section.section.section__blog
+        footer.footer.footer--about
+            .footer__row
+                .footer__col.footer__menu
+                    include ../common/menu.pug
+                .footer__col.social--dark
+                     ul.social__list
+                        li.social__item
+                            a.social__link.social__link--vk(href='https://vk.com/id12285178')
+                                svg.social__icon
+                                    use(xlink:href='')
+                        li.social__item
+                            a.social__link.social__link--github(href='https://github.com/Tatyaniya')
+                                svg.social__icon
+                                    use(xlink:href='')
+                        li.social__item
+                            a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
+                                svg.social__icon
+                                    use(xlink:href='')
+            .footer__row
+                .footer__col.footer__text
+                    p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
+                .footer__col.footer__text
+                    p Татьяна Мельничук создано в любовью в LoftSchool 2017include ../common/menu

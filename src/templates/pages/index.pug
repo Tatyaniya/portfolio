@@ -4,10 +4,37 @@ block variables
     - var title = "Добро пожаловать"
 
 block content
-    h1 Главная
-    form 
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    .wrapper
+        .welcome
+            .user-container
+                .welcome__info.user             
+                    .user__pic
+                        img.user__pic-img(src='../assets/images/users/me.jpg')
+                    .user__info
+                        .user__name Татьяна Мельничук
+                        .user__data Личный сайт веб-разработчика
+                    .welcome__social
+                        ul.social__list
+                            li.social__item
+                                a.social__link.social__link--welcome(href='https://vk.com/id12285178' target='_blank')
+                                    include ../../images/icons/vk.svg
+                            li.social__item
+                                a.social__link.social__link--welcome(href='https://github.com/Tatyaniya' target='_blank')
+                                    include ../../images/icons/github.svg
+                            li.social__item
+                                a.social__link.social__link--welcome(href='https://www.facebook.com/Tatyaniya' target='_blank')
+                                    include ../../images/icons/in.svg
+                    nav.menu.welcome__menu
+                        ul.menu__list
+                            li.menu__item--welcome
+                                a(href="/my-works.html").menu__link--welcome Мои работы
+                            li.menu__item--welcome
+                                a(href="/about.html").menu__link--welcome Обо мне
+                            li.menu__item--welcome
+                                a(href="/blog.html").menu__link--welcome Блог
+            button(type='button').button.welcome__button
+                span.button__text Авторизоваться
+            .welcome__footer.footer__text
+                span.footer__border &#169; Татьяна Мельничук 
+                span.footer__border создано c любовью в LoftSchool 
+                span.footer__border 2018

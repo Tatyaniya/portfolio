@@ -1,0 +1,44 @@
+.social__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.social__item {
+    margin-right: 25px;
+    width: 27px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+}
+
+.welcome__social {
+    margin-bottom: 40px;
+}
+
+.social__link--welcome {
+    width: 27px;
+    height: 27px;
+    fill: #00bfa5;
+
+        &:hover {
+            fill: #009688;
+        }
+}
+
+.social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.social__link--header {
+    width: 27px;
+    height: 27px;
+    fill: #9ebebe;
+
+        &:hover {
+            fill: #fff;
+        }
+}
