@@ -121,47 +121,56 @@ block content
         
     section.section.map
         .google-map
-        .map__data
-            .contacts
-                .contacts__title
-                    h3.block-subtitle Контакты
-                ul.contacts__list
-                    - 
-                        var contacts = [
-                            ['skype', 'Tatyaniya_'],
-                            ['mail', 'Tatyaniya@bigmir.net'],
-                            ['phone', '+380976247207'],
-                            ['mark', 'Киев']
-                        ]
-                
-                each contact in contacts
-                    li.contacts__item
-                        .contacts-row
-                            .contacts-row__icon #{contact[0]}
-                            .contacts-row__content #{contact[1]}
+        .map__contacts
+            .contacts__title
+                h3.block-subtitle.block-subtitle--map Контакты    
+            ul.contacts__list
+                li.contacts__item
+                    .contacts-row__icon
+                        include ../../images/icons/skype.svg
+                    span.contacts-row__content Tatyaniya_
+                li.contacts__item
+                    .contacts-row__icon
+                        include ../../images/icons/envelope.svg
+                    span.contacts-row__content Tatyaniya@bigmir.net
+                li.contacts__item
+                    .contacts-row__icon
+                        include ../../images/icons/phone.svg
+                    span.contacts-row__content +380976247207
+                li.contacts__item
+                    .contacts-row__icon
+                        include ../../images/icons/map.svg
+                    span.contacts-row__content Киев
+
+
         footer.footer.footer--about
+            .footer__links
+                nav.footer__menu
+                    ul.footer__list
+                        li.footer__item
+                            a(href="/my-works.html").footer__link Мои работы
+                        li.footer__item
+                            a(href="/about.html").footer__link Обо мне
+                        li.footer__item
+                            a(href="/blog.html").footer__link Блог
+                        li.footer__item
+                            a(href="/index.html").footer__link Авторизация
+                .social-dark
+                     ul.social-dark__list
+                        li.social-dark__item
+                            a.social-dark__link(href='https://vk.com/id12285178')
+                                include ../../images/icons/vk.svg
+                        li.social-dark__item
+                            a.social-dark__link(href='https://github.com/Tatyaniya')
+                                include ../../images/icons/github.svg
+                        li.social-dark__item
+                            a.social-dark__link(href='https://www.facebook.com/tatyaniya')
+                                include ../../images/icons/in.svg
             .footer__row
-                .footer__col.footer__menu
-                    include ../common/menu.pug
-                .footer__col.social--dark
-                     ul.social__list
-                        li.social__item
-                            a.social__link.social__link--vk(href='https://vk.com/id12285178')
-                                svg.social__icon
-                                    use(xlink:href='')
-                        li.social__item
-                            a.social__link.social__link--github(href='https://github.com/Tatyaniya')
-                                svg.social__icon
-                                    use(xlink:href='')
-                        li.social__item
-                            a.social__link.social__link--in(href='https://www.facebook.com/tatyaniya')
-                                svg.social__icon
-                                    use(xlink:href='')
-            .footer__row
-                .footer__col.footer__text
+                .footer__text.footer__text--left
                     p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
-                .footer__col.footer__text
-                    p Татьяна Мельничук создано в любовью в LoftSchool 2017
+                .footer__text
+                    p &#169; Татьяна Мельничук | создано c любовью в LoftSchool | 2018
 
 
 
