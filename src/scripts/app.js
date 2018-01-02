@@ -9,16 +9,16 @@ const moveLayers = function (e) {
 
     let i = 0;
     for (let layer of layers) {
-        const divider = 1/40;
+        const divider = i/40;
         const positionX = initialX * divider;
         const positionY = initialY * divider;
         const bottomPosition = (window.innerHeight / 2) * divider;
         const image = layer.firstElementChild;
 
-        layer.style.transform = `translate(${positionX}px, ${positionX}px)`;
+        layer.style.transform = `translate(${positionX}px, ${positionY}px)`;
         image.style.bottom = `-${bottomPosition}px`;
         i++;
     }
 };
 
-window.addEventListener('mousemove', moveLayers);
+window.addEventListener('mousemove', moveLayers); 

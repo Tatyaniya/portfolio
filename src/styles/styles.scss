@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .section {
@@ -23,13 +24,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 110%;
     height: 100%;
-    overflow: hidden;
+    width: 100%;
 }
 
 .parallax__image {
     position: absolute;
+    width: 120%; 
+    top: 100%; 
+    transform: translate(-10%,-50%);
 }
 
 .welcome {
