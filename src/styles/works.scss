@@ -1,3 +1,7 @@
+.speaking {
+    position: relative;
+}
+
 .works-title {
     display: flex;
     justify-content: center;
@@ -61,7 +65,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 180px;
+    height: 160px;
     padding-bottom: 20px;
 }
 
@@ -70,7 +74,7 @@
     width: 530px;
     height: 100%;
     position: relative;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .block-title--works-down {
@@ -80,27 +84,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
-    padding-top: 40px;
+    padding-top: 10px;
     
     &:before {
         left: -55px;
-        top: 79px;
+        top: 52px;
     }
 
     &:after {
         right: -45px;
-        top: 79px;
+        top: 52px;
     }
 }
 
 .comments {
     display: flex;
-    padding-top: 40px;     
+    padding-top: 30px;
+    margin-bottom: 25px;     
 }
 
 .comments__item {
     width: 400px;
-    padding: 0 20px;
+    padding: 0 20px;   
 }
 
 .comments__icon {
@@ -142,28 +147,58 @@
 }
 
 .form__container {
+    width: 360px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blur {
+    background: url('../images/bg/bg_works.jpg') center no-repeat;
+    //background-position: -420px -617px;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.form__elem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .block-subtitle--form {
     margin-bottom: 15px;
     margin-top: 0;
+    padding-top: 10px;
     &:before {
-        top: 20px;
+        top: 30px;
         left: -40px;
     }
     &:after {
-        top: 20px;
+        top: 30px;
         left: 270px;
     }
 }
 
 .form__feed {
     width: 100%;
+    padding: 0 25px;
 }
 
 .form__inputs {
@@ -218,7 +253,10 @@
 
 .footer__arrow {
     fill: #b3ced1;
-    
+    position: absolute;
+    left: 50%;
+    bottom: 165px;
+    transform: translate(-50%);
     margin-top: 5px;
 }
 
