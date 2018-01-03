@@ -54,7 +54,7 @@ function initMap() {
                 blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
             }
         }
-    });
+    })();
 
     blur.set();
 
