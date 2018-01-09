@@ -45,7 +45,7 @@ function initMap() {
 
         return {
             set: function () {
-                var imgWidth = document.querySelector('.speaking').offsetWidth,
+                var imgWidth = document.querySelector('.comments').offsetWidth,
                     posLeft = -wrapper.offsetLeft,
                     posTop = -wrapper.offsetTop,
                     blurCSS = form.style;

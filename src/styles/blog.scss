@@ -7,8 +7,8 @@
 
 .aside {
     position: relative;
-    margin-top: 60px;
-    padding-left: 40px;
+    margin-top: 3.75rem;
+    padding-left: 2.5rem;
     width: 30%;
 }
 
@@ -17,9 +17,9 @@
 }
 
 .aside__item {
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    padding: .625rem 1.25rem;
+    margin-bottom: 1.25rem;
+    margin-right: 1.25rem;
 }
 
 .aside__link {
@@ -29,14 +29,14 @@
 
 .articles {
     width: 70%;
-    margin-bottom: 200px;
-    padding: 60px 100px 0 30px;
+    margin-bottom: 12.5rem;
+    padding: 3.75rem 6.25rem 0 1.875rem;
 }
 
 .article {
-    padding-bottom: 50px;
-    border-bottom: 5px solid rgba(55,62,66,.1);
-    margin-bottom: 40px;
+    padding-bottom: 3.125rem;
+    border-bottom: .3125rem solid rgba(55,62,66,.1);
+    margin-bottom: 2.5rem;
 
         &:last-child {
             border-bottom: none;
@@ -47,8 +47,8 @@
 
 .article__title {
     font-family: 'bernier_regular', sans-serif;
-    font-size: 35px;
-    margin-bottom: 20px;
+    font-size: 2.1875rem;
+    margin-bottom: 1.25rem;
     width: 85%;
 }
 
@@ -56,7 +56,7 @@
     font-family: 'roboto-regular', sans-serif;
     font-size: 1rem;
     color: #00bfa5;
-    margin-bottom: 15px;
+    margin-bottom: .9375rem;
 }
 
 .footer--blog {
