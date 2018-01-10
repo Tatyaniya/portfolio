@@ -5,8 +5,8 @@
 }
 
 .social__item {
-    margin-right: 25px;
-    width: 27px;
+    margin-right: 1.5625rem;
+    width: 1.6875rem;
 
         &:last-child {
             margin-right: 0;
@@ -14,12 +14,12 @@
 }
 
 .welcome__social {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .social__link--welcome {
-    width: 27px;
-    height: 27px;
+    width: 1.6875rem;
+    height: 1.6875rem;
     fill: #00bfa5;
 
         &:hover {
@@ -29,13 +29,13 @@
 
 .social {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 1.875rem;
+    left: 1.875rem;
 }
 
 .social__link--header {
-    width: 27px;
-    height: 27px;
+    width: 1.6875rem;
+    height: 1.6875rem;
     fill: #9ebebe;
 
         &:hover {

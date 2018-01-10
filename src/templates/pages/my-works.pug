@@ -43,14 +43,20 @@ block content
         .works__elem
             .works__first
                 .works__elem-title
-                    h3.block-subtitle.block-subtitle--school Сайт школы онлайн-образования
+                    h3.block-subtitle.block-subtitle--school Сайт школы онлайн образования
                 .works__elem-tech
                     h4.block-green html, css, javascript
-                button.button.button--green
-                    svg.button__icon
-                    span.button__text Посмотреть сайт
+                a(href="https://loftschool.com/").works__link
+                    svg.works__icon
+                        include ../../images/icons/link.svg
+                    span.works__text Посмотреть сайт
             .works__second
+                img.works__second-img(src='../assets/images/bg/works1.png')
             .works__third
+                .arrow-down
+                    img.works__third-img(src='../assets/images/bg/works2.png')
+                .arrow-up
+                    img.works__third-img(src='../assets/images/bg/works3.png')
 
 
     section.section.speaking
@@ -83,16 +89,17 @@ block content
                         .comments__status преподаватель
 
         .form.form__container
-            h3.block-subtitle.block-subtitle--form связаться со мной
-            .form__feed
-                .form__blur
-                .form__inputs
-                    input(type="text" name="name" placeholder="Имя").form__input
-                    input(type="email" name="email" placeholder="Email").form__input
-                    textarea(name="message" placeholder="Ваше сообщение").form__input.form__message
-            .form__buttons
-                button(type="submit").form__button Отправить
-                button(type="reset").form__button Очистить
+            .blur
+            .form__elem
+                h3.block-subtitle.block-subtitle--form связаться со мной
+                .form__feed
+                    .form__inputs
+                        input(type="text" name="name" placeholder="Имя").form__input
+                        input(type="email" name="email" placeholder="Email").form__input
+                        textarea(name="message" placeholder="Ваше сообщение").form__input.form__message
+                .form__buttons
+                    button(type="submit").form__button Отправить
+                    button(type="reset").form__button Очистить
         .footer__arrow
             include ../../images/icons/arrow_down.svg
 
@@ -124,3 +131,5 @@ block content
                     p Я разработчик из Киева и этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
                 .footer__col.footer__text
                     p &#169; Татьяна Мельничук | создано c любовью в LoftSchool | 2018
+
+

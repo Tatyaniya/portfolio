@@ -11,7 +11,7 @@
 .about__left,
 .about__right {
     width: 50%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -20,29 +20,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: .625rem;
 }
 
 .about__left-title {
     fill: #dcdbd6;
-    width: 400px;
-    height: 120px;
-    margin-bottom: 10px;
+    width: 25rem;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 37px;
+    margin-bottom: 1.65rem;
 }
 
 .block-title {
     font-family: 'bernier_regular', sans-serif;
     font-size: 3.9375rem;
     text-align: center;
-    margin: 30px auto 60px auto;
+    margin: 1.875rem auto 1.875rem auto;
+    position: relative;
 
         &:before,
         &:after {
-            width: 23px;
+            width: 1.4375rem;
             height: 5px;
             background: #c3c4c0;
             content: "";
@@ -57,13 +58,13 @@
     transform: translate(-50%, -50%);
    
         &:before {
-            left: -48px;
-            top: 39px;
+            left: -2.875rem;
+            top: 2.625rem;
         }
 
         &:after {
-            right: -46px;
-            top: 39px;
+            right: -2.875rem;
+            top: 2.625rem;
         }
 }
 
@@ -76,14 +77,14 @@
 
 .block-subtitle {
     font-family: 'bernier_regular', sans-serif;
-    font-size: 35px;
+    font-size: 2.1875rem;
     text-transform: uppercase;
     position: relative;
 
         &:before,
         &:after {
-            width: 23px;
-            height: 5px;
+            width: 1.4375rem;
+            height: .3125rem;
             background: #c9c8c0;
             content: "";
             position: absolute;
@@ -92,41 +93,46 @@
 
 .block-subtitle--about {
     text-align: center;
-    width: 180px;
-    margin: 10px auto;
+    width: 11.25rem;
+    margin: .625rem auto;
 
         &:before {
-            left: 10px;
-            top: 20px;
+            left: .625rem;
+            top: 1.25rem;
         }
 
         &:after {
-            right: 10px;
-            top: 20px;
+            right: .625rem;
+            top: 1.25rem;
         }
 }
 
 .block-subtitle--skills {
     text-align: center;
-    width: 280px;
-    margin: 10px auto;
+    width: 17.5rem;
+    margin: .625rem auto;
 
         &:before {
-            left: -15px;
-            top: 20px;
+            left: -.9375rem;
+            top: 1.25rem;
         }
 
         &:after {
-            right: -15px;
-            top: 20px;
+            right: -.9375rem;
+            top: 1.25rem;
         }
 }
 
 .user-description__avatar {
-    width: 300px;
-    height: 300px;
+    width: 15rem;
+    height: 15rem;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 1.25rem;
+
+    @include desktop {
+        width: 12rem;
+        height: 12rem;
+    }
 }
 
 .user__avatar {
@@ -134,20 +140,17 @@
 }
 
 .user-description__text {
-    width: 420px;
+    width: 26.25rem;
     margin: 0 auto;
-    margin-top: 40px;
+    padding: 0 .625rem;
 }
-
-
-
 
 .about__right {
     background: #eeebdf;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 30px;
+    padding: .625rem 1.875rem;
 }
 
 .about__right-contend {
@@ -162,8 +165,9 @@
 
 .skills-row__title {
     font-family: 'roboto-medium', sans-serif;
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 1.75rem;
+    margin-bottom: .625rem;
+    margin-top: .625rem;
 }
 
 .skill__circle-title {
@@ -173,7 +177,7 @@
     transform: translate(-50%, -50%);
     color: #00bfa5;
     font-family: 'roboto-medium', sans-serif;
-    font-size: 13px;
+    font-size: .8125rem;
     line-height: 1.3;
 }
 
@@ -187,7 +191,7 @@
     transition: stroke-dashoffset 1s;
     will-change: stroke-dashoffset;
     stroke: #dad7cb;
-    stroke-width: 18px;
+    stroke-width: 1.125rem;
 }
 
 .circle__second {
@@ -195,14 +199,20 @@
     stroke-dashoffset: 282.6;
     transition: stroke-dashoffset 1s;
     will-change: stroke-dashoffset;
-    stroke-width: 18px;
+    stroke-width: 1.125rem;
 }
   
 .skills-row__item {
-    width: 110px;
-    height: 110px;
+    width: 6.5rem;
+    height: 6.5rem;
     position: relative;
-    margin: 10px;
+    margin: .625rem;
+
+    @include desktop {
+        width: 5.625rem;
+        height: 5.625rem;
+        margin: .3125rem;
+    }
 }
   
 .circles:hover .circle-0 {
@@ -270,11 +280,6 @@
 }
 
 
-
-.map {
-    position: relative;
-}
-
 .footer {
     width: 100%;
 }
@@ -290,7 +295,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 62px;
 }
 
 .footer__list,
@@ -299,10 +303,12 @@
 }
 
 .footer__item {
-    margin-right: 39px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 2.4375rem;
 
         &:first-child {
-            margin-left: 30px;
+            margin-left: 1.875rem;
         }
 }
 
@@ -313,17 +319,17 @@
 }
 
 .social-dark__item {
-    margin-right: 14px;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
+    margin-right: .875rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .3125rem;
 }
 
 .social-dark__link {
     
     fill: #9eaaab;
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     
 
         &:hover {
@@ -335,8 +341,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
-    padding: 0 30px 0 30px;
+    padding: 0 1.5rem 0 1.5rem;
 }
 
 .footer__text {
@@ -344,25 +349,34 @@
 }
 
 .footer__text--left {
-    width: 500px;
+    width: 31.25rem;
     font-family: 'roboto-light', sans-serif;
     font-size: 1rem;
 }
 
 .map {
-    background: #95b6b5;
+    position: relative;
+    height: 100vh;
+    background: #b3ced1;
+}
+
+.google-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .map__contacts {
-    width: 350px;
-    
+    width: 21.875rem;   
     border-radius: 5px;
     background: rgba(255,255,255,.7);
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0 50px 36px;
+    padding: 0 3.125rem 2.25rem;
 }
 
 .block-subtitle--map {
@@ -372,14 +386,14 @@
 
         &:before {
             position: absolute;
-            top: 22px;
-            left: 15px;
+            top: 1.375rem;
+            left: .9375rem;
         }
 
         &:after {
             position: absolute;
-            top: 22px;
-            left: 207px;
+            top: 1.375rem;
+            left: 12.9375rem;
         }
 }
 
@@ -391,11 +405,11 @@
 
 .contacts__item {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 .contacts-row__icon {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     fill: #00bea4;
-    margin-right: 13px;
+    margin-right: .8125rem;
 }

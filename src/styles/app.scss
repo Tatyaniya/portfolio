@@ -1,5 +1,29 @@
 @import 'normalize';
 
+@mixin desktop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
 body{
     margin: 0;
     background: #fff;
@@ -7,11 +31,19 @@ body{
     color: #455a64;
     font-size: 16px;
     line-height: 1.42;
+
+    @include desktop {
+        font-size: 15px;
+    }
 }
 
 *, *::before, *::after {
 	box-sizing: border-box;
     text-decoration: none;
+}
+
+h4 {
+    margin: 0;
 }
 
 ul {
@@ -129,10 +161,9 @@ li {
 }
 
 @import 'common/menu';
-@import 'common/technologies';
-@import 'common/slider';
 
 @import 'styles';
 @import 'common/social';
 @import 'about.scss';
-@import 'works.scss'
+@import 'works.scss';
+@import 'blog.scss'
