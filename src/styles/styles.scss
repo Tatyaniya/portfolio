@@ -16,6 +16,10 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .parallax__layer {
@@ -23,7 +27,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
+    width: 100%;  
 }
 
 .parallax__image {
@@ -39,13 +43,16 @@
 }
 
 .welcome {
-    /*background: url(../images/bg/welcome-bg.jpg) center center no-repeat;
-    background-size: cover;*/
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+        background: url(../images/bg/welcome-bg.jpg) center center no-repeat;
+        background-size: cover; 
+    }
 }
 
 .user-container {
@@ -57,6 +64,11 @@
     border-radius: 5px;
     padding-top: 2.5rem;
     width: 24rem;
+
+    @include phones {
+        width: 85%;
+        padding-top: .9rem;
+    }
 }
 
 .welcome__info.user {
@@ -69,7 +81,16 @@
 }
 
 .user__pic-img {
-    border-radius: 50%; 
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    width: 10.9375rem;
+    height: 10.9375rem;
+
+    @include phones {
+        width: 9rem;
+        height: 9rem;
+        margin-bottom: .7rem;
+    }
 }
 
 .user__name {
@@ -82,7 +103,11 @@
 .user__data{
     text-align: center;
     font-size: 1rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1rem;
+
+    @include phones {
+        margin-bottom: .8rem;
+    }
 }
 
 .button {
@@ -104,6 +129,10 @@
         &:hover {
             background: #fff;
             color: #00bfa5;
+        }
+
+        @include phones {
+            padding: .6rem 1rem;
         }
 }
 
@@ -162,12 +191,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.user__pic-img {
-    margin-bottom: 1.25rem;
-    width: 10.9375rem;
-    height: 10.9375rem;
 }
 
 .user__name--home {

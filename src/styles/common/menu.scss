@@ -25,6 +25,10 @@
             border-right: none;
             border-bottom-right-radius: 5px;
         }
+
+        @include phones {
+            padding: .55rem 0;
+        }
 }
 
 .menu__link--welcome {
