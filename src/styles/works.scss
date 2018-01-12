@@ -54,6 +54,7 @@
 }
 
 .works__elem {
+    background: #f0efe9;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -82,6 +83,18 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    @include tablets {
+        height: 35%;
+        margin-top: 50%;
+        padding-bottom: 10px;
+    }
+    
+    @include phones {
+        margin-top: 68%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .block-subtitle--school {
@@ -98,12 +111,33 @@
             top: 1.3125rem;
             right: -1.25rem;
         }
+
+        @include phones {
+            width: 60%;
+            font-size: 1.5rem;
+            margin: 0 auto;
+            padding-bottom: 6px;
+
+            &:before {
+                top: 1.7rem;
+                left: -2.5rem;
+            }
+    
+            &:after {
+                top: 1.7rem;
+                right: -2.5rem;
+            }
+        }
 }
 
 .works__elem-tech {
     border-top: 1px solid #20b5a1;
     border-bottom: 1px solid #20b5a1;
     margin-bottom: 2.5rem;
+
+    @include phones {
+        margin-bottom: 1rem;
+    }
 }
 
 .block-green {
@@ -113,6 +147,10 @@
     padding: 1.125rem 7.5rem 1.125rem 7.5rem;
     text-transform: uppercase;
     
+    @include phones {
+        font-size: .875rem;
+        padding: .5rem 3rem;
+    }
 }
 
 .works__link {
@@ -176,11 +214,7 @@
 }
 
 .works__first {
-    @include tablets {
-        height: 35%;
-        margin-top: 50%;
-        padding-bottom: 10px;
-    } 
+    
 }
 
 
