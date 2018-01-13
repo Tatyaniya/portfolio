@@ -61,41 +61,37 @@ function initMap() {
     window.onresize = function () {
         blur.set();
     }
-} else if (document.querySelector('.works__second')) {
+} else if (document.getElementById('slides')) {
 
 
-var next = document.getElementById('next');
-var prew = document.getElementById('prew');
-
-var slides = document.getElementsByClassName('.works__second');
-for(var i=0; i > slides.length; i++) {
-    slides[i].style.zIndex = slides.length - i;
-}
-
-next.onclick = function () {
-    var activeEl = document.querySelector('.woorks__active');
-    if(activeEl.nextElementSibling) {
-       activeEl.style.left = "-100%";
-       activeEl.classList.remove('woorks__active');
-       activeEl.nextElementSibling.classList.add('woorks__active');
-       this.classList.remove('no_active');
-       prew.classList.remove('no_active');
-       if(!activeEl.nextElementSibling.nextElementSibling) {
-          this.classList.add('no_active');
-       }
+    const slides = document.querySelectorAll('#slides .slide');
+    const next = document.getElementById('next');
+    const previous = document.getElementById('previous');
+    const controls = document.querySelectorAll('.controls');
+    
+    let currentSlide = 0;
+    
+    function goToSlide(n){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (n+slides.length)%slides.length;
+        slides[currentSlide].className = 'slide showing';
     }
-}
-prew.onclick = function () {
-    var activeEl = document.querySelector('.woorks__active');
-    if(activeEl.previousElementSibling) {
-       activeEl.previousElementSibling.style.left = "0%";
-       activeEl.classList.remove('woorks__active');
-       activeEl.previousElementSibling.classList.add('woorks__active');
-       this.classList.remove('no_active');
-       next.classList.remove('no_active');
-       if(!activeEl.previousElementSibling.previousElementSibling) {
-          this.classList.add('no_active');
-       }
+    
+    function setupListners(){
+        next.onclick = function(){
+            goToSlide(currentSlide+1);
+        }
+        previous.onclick = function(){
+            goToSlide(currentSlide-1);
+        }
     }
-
+    
+    function sliderInit(){
+        if (slides.length !== 0){
+            setupListners();
+            showButtons();
+        }
+    }
+    
+    module.exports = sliderInit;
 }
