@@ -51,7 +51,7 @@ function initMap() {
                     blurCSS = form.style;
 
                 blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
-                blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
+                blurCSS.backgroundPosition = posTop + 'px' + ' ' + posLeft + 'px';
             }
         }
     })();
@@ -62,7 +62,7 @@ function initMap() {
         blur.set();
 }
 
-} else if (document.getElementById('slides')) {
+}
 
 
     const slides = document.querySelectorAll('#slides .slide');
@@ -90,9 +90,7 @@ function initMap() {
     function sliderInit(){
         if (slides.length !== 0){
             setupListners();
-            showButtons();
         }
-}
-    
-    module.exports = sliderInit;
-}
+    }
+
+    sliderInit()
