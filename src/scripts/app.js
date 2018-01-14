@@ -60,7 +60,8 @@ function initMap() {
 
     window.onresize = function () {
         blur.set();
-    }
+}
+
 } else if (document.getElementById('slides')) {
 
 
@@ -91,7 +92,7 @@ function initMap() {
             setupListners();
             showButtons();
         }
-    }
+}
     
     module.exports = sliderInit;
 }
