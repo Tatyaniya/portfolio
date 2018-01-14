@@ -1,8 +1,7 @@
 .blog {
     position: relative;
     background-color: #fff;
-    display: flex;
-   
+    display: flex;   
 }
 
 .aside {
@@ -10,6 +9,10 @@
     margin-top: 3.75rem;
     padding-left: 2.5rem;
     width: 30%;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .aside__list {
@@ -31,6 +34,11 @@
     width: 70%;
     margin-bottom: 12.5rem;
     padding: 3.75rem 6.25rem 0 1.875rem;
+
+    @include tablets {
+        width: 100%;
+        padding: 2.1rem;
+    }
 }
 
 .article {
